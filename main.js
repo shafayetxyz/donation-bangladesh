@@ -78,6 +78,9 @@ calculateQuota.addEventListener('click', function() {
 
 let historyBtn = document.getElementById("historyBtn")
 let donationBtn = document.getElementById("donationBtn")
+let historySection = document.getElementById("history")
+let donationSection = document.getElementById("donationSection")
+
 historyBtn.addEventListener('click', function(){
     historyBtn.classList.add(   
         "bg-lime-400"
@@ -85,6 +88,15 @@ historyBtn.addEventListener('click', function(){
 
     donationBtn.classList.remove(
         "bg-lime-400"
+    )
+
+    historySection.classList.remove(
+        "hidden"
+    
+    )
+
+    donationSection.classList.add(
+        "hidden"
     )
 })
 
@@ -97,6 +109,14 @@ donationBtn.addEventListener('click', function(){
     historyBtn.classList.remove(
         "bg-lime-400"
     )
+
+        historySection.classList.add(
+        "hidden"
+        )
+
+        donationSection.classList.remove(
+            "hidden"
+        )
 })
 
 
