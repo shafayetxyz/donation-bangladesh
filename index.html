@@ -13,13 +13,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>    
-    <header>  
+    <header class="sticky top-0 bg-[rgba(255,255,255,0.5)]">  
       <nav class="flex justify-between m-5"> 
         <a href="./blog.html"><button class="btn bg-lime-400">Blog</button></a>
-
-        <h2>Donate Bangladesh</h2>
+        <div class="flex" >
+          <img src="./images/logo.png" alt="">
+          <h2>Donate Bangladesh</h2>
+        </div>
         <!-- Total -->
-        <h1 id="total">5500</h1>
+        <div class="flex"> 
+          <img src="./images/coin.png" alt="">
+          <h1 id="total">5500</h1>
+        </div>
       </nav>
       <div class="flex items-center justify-center gap-2"> 
         <button class="btn bg-lime-400">Donation</button>
@@ -31,10 +36,13 @@
 
 
     <!-- Noakhali -->
-    <div class="flex gap-4 m-8"> 
+    <div class="flex gap-4 m-8 flex-col lg:flex-row"> 
       <img src="./images/noakhali.png" class="rounded-sm">
       <div> 
-        <p id="noakhaliValue">0</p>
+        <div class="flex"> 
+          <img src="./images/coin.png" alt="">
+          <p id="noakhaliValue">0</p>
+        </div>
         <h2 id="donateNoakhali">Donate for Flood at Noakhali, Bangladesh</h2>
         <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
         <input id="noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs" />
@@ -43,7 +51,7 @@
     </div>
 
     <!-- Feni -->
-    <div class="flex gap-4 m-8"> 
+    <div class="flex gap-4 m-8 flex-col lg:flex-row"> 
       <img src="./images/feni.png" class="rounded-sm">
       <div> 
         <p id="feniValue">600</p>
@@ -55,7 +63,7 @@
     </div>
 
     <!-- Quota -->
-    <div class="flex gap-4 m-8"> 
+    <div class="flex gap-4 m-8 flex-col lg:flex-row"> 
       <img src="./images/quota-protest.png" class="rounded-sm">
       <div> 
         <p id="quotaValue">2400</p>
@@ -66,9 +74,25 @@
       </div>
     </div>
 
-    <div id="history">  
+    <div id="history" class="hidden">  
 
     </div>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Congrats!</h3>
+        <img src="./images/coin.png" alt="">
+        <p class="py-4">You have donated for humankind</p>
+        <p>Succesfully</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
 
     </main>

@@ -20,6 +20,9 @@ function calculation(inputId, displayId, title) {
     const updatedValue = inputValue + displayValue;
     displayElement.innerText = updatedValue.toFixed(2);
 
+    const modal = document.getElementById("my_modal_1")
+    modal.showModal()
+
     const titleText= document.getElementById(title).textContent
 
     history(inputId, inputValue, titleText)
@@ -71,4 +74,7 @@ const calculateQuota = document.getElementById("quota-btn")
 calculateQuota.addEventListener('click', function() {
     calculation("quota", "quotaValue", "donateQuota");
 });
+
+
+
 
